@@ -1,0 +1,52 @@
+{
+  "name": "@puri-ui/core",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "main": "./dist/cjs/index.js",
+  "types": "./dist/es/index.d.ts",
+  "module": "./dist/es/index.js",
+  "browser": "./dist/index.js",
+  "exports": {
+    "./css": "./dist/index.css",
+    ".": {
+      "types": "./dist/cjs/index.d.ts",
+      "import": "./dist/es/index.js",
+      "require": "./dist/cjs/index.js"
+    },
+    "./*": "./dist/*"
+  },
+  "scripts": {
+    "dev": "vite",
+    "build:examples": "vue-tsc -b && vite build",
+    "build": "vite build",
+    "type-check": "vue-tsc --noEmit",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@rollup/plugin-node-resolve": "^15.3.0",
+    "@vuepic/vue-datepicker": "^10.0.0",
+    "@vueuse/core": "^11.2.0",
+    "@vueuse/integrations": "^11.2.0",
+    "qrcode": "^1.5.4",
+    "bootstrap-icons": "^1.11.3",
+    "unplugin-auto-import": "^0.18.5",
+    "unplugin-vue-components": "^0.27.4",
+    "vite-plugin-dts": "^4.3.0",
+    "vue": "^3.5.12",
+    "vue-router": "^4.4.5"
+  },
+  "devDependencies": {
+    "@rollup/plugin-terser": "^0.4.4",
+    "@types/minimist": "^1.2.5",
+    "@types/node": "^22.9.0",
+    "@vitejs/plugin-vue": "^5.1.4",
+    "autoprefixer": "^10.4.20",
+    "minimist": "^1.2.8",
+    "postcss": "^8.4.49",
+    "tailwindcss": "^3.4.15",
+    "typescript": "~5.6.2",
+    "vite": "^5.4.10",
+    "vue-tsc": "^2.1.8"
+  }
+}

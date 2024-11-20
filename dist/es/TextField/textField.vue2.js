@@ -1,0 +1,9 @@
+import { defineComponent as u, mergeModels as c, useModel as m, openBlock as a, createElementBlock as o, toDisplayString as y, createCommentVNode as p, createElementVNode as r, normalizeClass as f, renderSlot as n, withDirectives as x, vModelDynamic as v } from "vue";
+const b = { class: "group" }, k = { key: 0, class: "puri-textfield-label" }, S = { class: "puri-textfield-container group" }, g = { class: "flex-grow" }, C = ["type", "autocomplete", "placeholder"], h = u({ __name: "textField", props: c({ type: { type: String, default: "text" }, label: { type: String, required: !1 }, placeholder: { type: String, required: !1 }, prependIcon: { type: String, required: !1 }, cleaner: { type: Boolean, default: !1 }, validation: { type: Array, required: !1 }, autoComplete: { type: String, default: "off" } }, { modelValue: {}, modelModifiers: {} }), emits: ["update:modelValue"], setup(l) {
+  const i = m(l, "modelValue"), t = l;
+  return (d, e) => (a(), o("div", b, [t.label ? (a(), o("div", k, y(t.label), 1)) : p("", !0), r("div", S, [t.prependIcon ? (a(), o("i", { key: 0, class: f(["bi puri-textfield-icon", t.prependIcon]) }, null, 2)) : p("", !0), n(d.$slots, "prepend", {}, void 0, !0), r("div", g, [x(r("input", { type: l.type, autocomplete: t.autoComplete, "onUpdate:modelValue": e[0] || (e[0] = (s) => i.value = s), class: "puri-textfield-input w-full", placeholder: l.placeholder }, null, 8, C), [[v, i.value]])]), l.cleaner ? (a(), o("button", { key: 1, onClick: e[1] || (e[1] = (s) => i.value = ""), class: "puri-textfield-cleaner" }, e[2] || (e[2] = [r("i", { class: "bi bi-x-circle-fill text-xs text-gray-400 dark:text-neutral-500" }, null, -1)]))) : p("", !0), n(d.$slots, "append", {}, void 0, !0)])]));
+} });
+export {
+  h as default
+};
+//# sourceMappingURL=textField.vue2.js.map

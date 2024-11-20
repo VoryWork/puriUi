@@ -1,0 +1,16 @@
+import { default as Card } from './Card';
+import { default as collapse } from './Collapse';
+import { default as container } from './Container';
+import { default as DatePicker } from './DatePicker';
+import { default as Dialog } from './Dialog';
+import { default as ItemIndicator } from './ItemIndicator';
+import { default as listItem } from './ListItem';
+import { default as mainView } from './MainView';
+import { default as navBar } from './NavBar';
+import { default as textField } from './TextField';
+import { default as titlebar } from './Titlebar';
+import { App } from 'vue';
+declare const install: (app: App) => void;
+export * from './interface';
+export { Card, DatePicker, Dialog, ItemIndicator, listItem, titlebar, collapse, navBar, mainView, container, textField, };
+export default install;
