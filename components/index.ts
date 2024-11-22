@@ -4,6 +4,7 @@ import Card from "./Card";
 import Collapse from "./Collapse";
 import ConfirmDialog from "./ConfirmDialog";
 import Container from "./Container";
+import createRipple from "./CreateRipple";
 import DatePicker from "./DatePicker";
 import Dialog from "./Dialog";
 import ItemIndicator from "./ItemIndicator";
@@ -46,6 +47,7 @@ const install = function (app: App) {
   components.forEach((component) => app.component(`Puri${component.__name as string}`, component));
 };
 export * from "./interface";
+export {createRipple}
 export {
   Badge,
   Button,

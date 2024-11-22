@@ -1,10 +1,10 @@
 <template>
-  <div
+  <header
     ref="titlebar"
     class="puri-titlebar"
     :class="[props.native ? 'mt-8' : 'mt-0', props.titleAutoHide ? 'puri-titlebar-hide' : '']">
     <slot></slot>
-  </div>
+  </header>
 </template>
 
 <script setup lang="ts">

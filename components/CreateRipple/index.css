@@ -1,0 +1,13 @@
+.puri-ripple {
+  @apply relative;
+}
+.puri-ripple span.puri-ripple-round {
+  @apply absolute rounded-full scale-0 bg-white/70;
+  animation: puri-ripple-anime 600ms linear;
+}
+@keyframes puri-ripple-anime {
+  to {
+    transform: scale(4);
+    opacity: 0;
+  }
+}
