@@ -1,9 +1,9 @@
 import type { App } from 'vue'
-import titlebar from './titlebar.vue'
+import Titlebar from './titlebar.vue'
 
 // 使用install方法，在app.use挂载
-titlebar.install = (app: App): void => {
-  app.component(<string>titlebar.__name, titlebar)
+Titlebar.install = (app: App): void => {
+  app.component(<string>Titlebar.__name, Titlebar)
 }
 
-export default titlebar
+export default Titlebar

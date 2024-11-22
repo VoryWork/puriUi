@@ -1,5 +1,8 @@
+import "./Badge/index.js";
+import "./Button/index.js";
 import "./Card/index.js";
 import "./Collapse/index.js";
+import "./ConfirmDialog/index.js";
 import "./Container/index.js";
 import "./DatePicker/index.js";
 import "./Dialog/index.js";
@@ -10,34 +13,43 @@ import "./NavBar/index.js";
 import "./TextField/index.js";
 import "./Titlebar/index.js";
 /* empty css           */
-import m from "./Card/card.vue.js";
-import t from "./DatePicker/datePicker.vue.js";
-import i from "./Dialog/dialog.vue.js";
-import p from "./ItemIndicator/ItemIndicator.vue.js";
-import a from "./ListItem/listItem.vue.js";
-import s from "./Titlebar/titlebar.vue.js";
-import e from "./Collapse/collapse.vue.js";
-import f from "./NavBar/navBar.vue.js";
-import n from "./MainView/mainView.vue.js";
-/* empty css                       */
-import c from "./Container/container.vue.js";
+import m from "./Badge/Badge.vue.js";
+/* empty css                 */
+import t from "./Button/Button.vue.js";
+/* empty css                   */
+import i from "./Card/card.vue.js";
+import p from "./Collapse/collapse.vue.js";
+import a from "./ConfirmDialog/confirmDialog.vue.js";
+/* empty css                                 */
+import f from "./Container/container.vue.js";
 /* empty css                         */
-import l from "./TextField/textField.vue.js";
-const d = [m, t, i, p, a, s, e, f, n, c, l], J = function(r) {
-  d.forEach((o) => r.component(`Puri${o.__name}`, o));
+import s from "./DatePicker/datePicker.vue.js";
+import e from "./Dialog/dialog.vue.js";
+import n from "./ItemIndicator/ItemIndicator.vue.js";
+import l from "./ListItem/listItem.vue.js";
+import c from "./MainView/mainView.vue.js";
+/* empty css                       */
+import d from "./NavBar/navBar.vue.js";
+import u from "./TextField/textField.vue.js";
+import C from "./Titlebar/titlebar.vue.js";
+const g = [m, t, i, p, a, f, s, e, n, l, c, d, u, C], X = function(r) {
+  g.forEach((o) => r.component(`Puri${o.__name}`, o));
 };
 export {
-  m as Card,
-  t as DatePicker,
-  i as Dialog,
-  p as ItemIndicator,
-  e as collapse,
-  c as container,
-  J as default,
-  a as listItem,
-  n as mainView,
-  f as navBar,
-  l as textField,
-  s as titlebar
+  m as Badge,
+  t as Button,
+  i as Card,
+  p as Collapse,
+  a as ConfirmDialog,
+  f as Container,
+  s as DatePicker,
+  e as Dialog,
+  n as ItemIndicator,
+  l as ListItem,
+  c as MainView,
+  d as NavBar,
+  u as TextField,
+  C as Titlebar,
+  X as default
 };
 //# sourceMappingURL=index.js.map

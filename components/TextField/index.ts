@@ -1,9 +1,9 @@
 import type { App } from 'vue'
-import textField from './textField.vue'
+import TextField from './textField.vue'
 
 // 使用install方法，在app.use挂载
-textField.install = (app: App): void => {
-  app.component(<string>textField.__name, textField)
+TextField.install = (app: App): void => {
+  app.component(<string>TextField.__name, TextField)
 }
 
-export default textField
+export default TextField

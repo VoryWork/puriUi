@@ -43,7 +43,6 @@ export default defineConfig({
     emptyOutDir: true, // 默认情况下，若 outDir 在 root 目录下，则 Vite 会在构建时清空该目录。若 outDir 在根目录之外则会抛出一个警告避免意外删除掉重要的文件。
     lib: {
       // 构建为库。如果指定了 build.lib，build.cssCodeSplit 会默认为 false。
-      formats: ["es", "cjs", "umd"],
       // __dirname 的值是 vite.config.ts 文件所在目录
       entry: resolve(__dirname, "components", "index.ts"), // entry 是必需的，因为库不能使用HTML作为入口。
       name: "PuriUi", // 暴露的全局变量

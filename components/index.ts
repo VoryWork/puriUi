@@ -1,30 +1,36 @@
+import Badge from "./Badge";
+import Button from "./Button";
 import Card from "./Card";
-import collapse from "./Collapse";
-import container from "./Container";
+import Collapse from "./Collapse";
+import ConfirmDialog from "./ConfirmDialog";
+import Container from "./Container";
 import DatePicker from "./DatePicker";
 import Dialog from "./Dialog";
 import ItemIndicator from "./ItemIndicator";
-import listItem from "./ListItem";
-import mainView from "./MainView";
-import navBar from "./NavBar";
-import textField from "./TextField";
-import titlebar from "./Titlebar";
+import ListItem from "./ListItem";
+import MainView from "./MainView";
+import NavBar from "./NavBar";
+import TextField from "./TextField";
+import Titlebar from "./Titlebar";
 import "./global.css";
 import type { App } from "vue";
 
 // 所有组件列表
 const components = [
+  Badge,
+  Button,
   Card,
+  Collapse,
+  ConfirmDialog,
+  Container,
   DatePicker,
   Dialog,
   ItemIndicator,
-  listItem,
-  titlebar,
-  collapse,
-  navBar,
-  mainView,
-  container,
-  textField,
+  ListItem,
+  MainView,
+  NavBar,
+  TextField,
+  Titlebar,
 ];
 
 // 定义 install 方法
@@ -39,19 +45,22 @@ const install = function (app: App) {
   */
   components.forEach((component) => app.component(`Puri${component.__name as string}`, component));
 };
-export * from './interface';
+export * from "./interface";
 export {
+  Badge,
+  Button,
   Card,
+  Collapse,
+  ConfirmDialog,
+  Container,
   DatePicker,
   Dialog,
   ItemIndicator,
-  listItem,
-  titlebar,
-  collapse,
-  navBar,
-  mainView,
-  container,
-  textField,
+  ListItem,
+  MainView,
+  NavBar,
+  TextField,
+  Titlebar,
 };
 
 export default install;

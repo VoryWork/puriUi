@@ -1,2 +1,2 @@
-import { default as textField } from './textField.vue';
-export default textField;
+import { default as TextField } from './textField.vue';
+export default TextField;

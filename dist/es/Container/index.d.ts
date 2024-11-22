@@ -1,2 +1,2 @@
-import { default as container } from './container.vue';
-export default container;
+import { default as Container } from './container.vue';
+export default Container;
