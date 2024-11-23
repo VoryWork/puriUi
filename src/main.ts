@@ -1,7 +1,7 @@
-import { createApp } from 'vue'
-import './style.css'
-import App from './App.vue'
-import '@puri-ui/core/css'
-import puri from '@puri-ui/core'
+import { createApp } from "vue";
+import "./style.css";
+import "../components/global.css";
+import App from "./App.vue";
+import "@puri-ui/core/css";
 
-createApp(App).use(puri).mount('#app')
+createApp(App).mount("#app");
