@@ -19,7 +19,7 @@ const props = defineProps<{ native?: boolean; navbar?: boolean; titlebar?: boole
 
 <style>
 .puri-container {
-  @apply w-full pb-2 mx-auto md:container p-4 space-y-2 transition-all;
+  @apply w-full flex flex-col min-h-dvh pb-2 mx-auto md:container p-4 space-y-2 transition-all;
 }
 .puri-container.padding-navbar {
   @apply pb-[4rem] md:pb-[4.25rem];

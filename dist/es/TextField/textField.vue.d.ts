@@ -8,6 +8,11 @@ declare function __VLS_template(): {
 };
 type __VLS_TemplateResult = ReturnType<typeof __VLS_template>;
 declare const __VLS_component: import('vue').DefineComponent<import('vue').ExtractPropTypes<{
+    variant: {
+        type: StringConstructor;
+        allow: string[];
+        default: string;
+    };
     type: {
         type: StringConstructor;
         default: string;
@@ -55,6 +60,11 @@ declare const __VLS_component: import('vue').DefineComponent<import('vue').Extra
 }>, {}, {}, {}, {}, import('vue').ComponentOptionsMixin, import('vue').ComponentOptionsMixin, {
     "update:modelValue": (modelValue: any) => any;
 }, string, import('vue').PublicProps, Readonly<import('vue').ExtractPropTypes<{
+    variant: {
+        type: StringConstructor;
+        allow: string[];
+        default: string;
+    };
     type: {
         type: StringConstructor;
         default: string;
@@ -103,6 +113,7 @@ declare const __VLS_component: import('vue').DefineComponent<import('vue').Extra
     "onUpdate:modelValue"?: ((modelValue: any) => any) | undefined;
 }>, {
     type: string;
+    variant: string;
     cleaner: boolean;
     autoComplete: string;
 }, {}, {}, {}, string, import('vue').ComponentProvideOptions, true, {}, any>;

@@ -5,7 +5,7 @@
       <p class="puri-confirmer-content"><slot></slot></p>
       <div class="puri-confirmer-actions">
         <Button custom-color @click="onCancel?onCancel():undefined" class="puri-confirmer-actions-cancel">{{ props.cancelText||'取消' }}</Button>
-        <Button @click="onConfirm?onConfirm():undefined" class="px-2" :class="props.confirmColorClass ?? 'text-green-500 dark:text-green-400'" custom-color>
+        <Button @click="onConfirm?onConfirm():(model=false)" class="px-2" :class="props.confirmColorClass ?? 'text-green-500 dark:text-green-400'" custom-color>
           {{ props.confirmText || "确认" }}
         </Button>
       </div>

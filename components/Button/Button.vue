@@ -33,16 +33,16 @@ const props = defineProps<{
   @apply text-gray-500 dark:text-neutral-400;
 }
 .puri-button.puri-button-solo {
-  @apply rounded-md px-2;
+  @apply text-center px-2 block w-full rounded-md;
 }
 .puri-button.puri-button-solo.default-color {
   @apply text-gray-800 bg-gray-200 dark:bg-neutral-800 dark:text-neutral-400;
 }
 .puri-button.puri-button-small {
-  @apply text-xs font-medium;
+  @apply text-xs;
 }
 .puri-button.puri-button-large {
-  @apply text-base font-medium p-2;
+  @apply text-base rounded-lg px-2 py-1.5;
 }
 .puri-button.puri-button-large-button-solo {
   @apply px-3;
