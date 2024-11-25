@@ -1,7 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 import { Config } from "tailwindcss";
 export default {
-  content: ["./index.html", "./src/**/*.{vue,js,ts,jsx,tsx}"],
+  content: ["./index.html", "./src/**/*.{vue,js,ts,jsx,tsx}","./components/**/*.{vue,js,ts,jsx,tsx}"],
   darkMode: "class",
   theme: {
     screens: {
