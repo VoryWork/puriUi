@@ -16,7 +16,7 @@ const props = defineProps<{ prependIcon?: string; title?: string; compact?: bool
 
 <style scoped>
 .puri-list-item {
-  @apply flex flex-row items-center text-base p-3 text-gray-900 dark:text-neutral-400 duration-300;
+  @apply flex flex-row items-center text-base p-3 text-gray-800 dark:text-neutral-400 duration-300;
 }
 .puri-list-item.compact {
   @apply p-3;

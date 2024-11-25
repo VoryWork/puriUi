@@ -15,7 +15,7 @@ const props = defineProps<{ title?: string ,customColor?:boolean }>();
 
 <style scoped>
 .puri-card {
-  @apply transition-colors rounded-xl overflow-hidden relative;
+  @apply transition-all rounded-xl overflow-hidden relative;
 }
 .puri-card.default-color{
   @apply bg-white dark:bg-neutral-800 dark:border-t border-neutral-700 border-opacity-50
