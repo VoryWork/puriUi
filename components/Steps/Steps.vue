@@ -1,5 +1,5 @@
 <template>
-    <div class="w-dvw">
+    <div>
         <ul class="puri-steps">
             <li v-for="(item, index) in  props.items " :key="index" class="puri-steps-item"
                 @click="handerStepsChange(index)" :class="{ clickable: props.clickable }">

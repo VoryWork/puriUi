@@ -11,6 +11,7 @@ import ItemIndicator from "./ItemIndicator";
 import ListItem from "./ListItem";
 import MainView from "./MainView";
 import NavBar from "./NavBar";
+import Progress from "./Progress";
 import TextField from "./TextField";
 import Titlebar from "./Titlebar";
 import "./global.css";
@@ -30,6 +31,7 @@ const components = [
   ListItem,
   MainView,
   NavBar,
+  Progress,
   TextField,
   Titlebar,
 ];
@@ -61,6 +63,7 @@ export {
   ListItem,
   MainView,
   NavBar,
+  Progress,
   TextField,
   Titlebar,
 };
