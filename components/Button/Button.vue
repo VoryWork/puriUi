@@ -27,7 +27,7 @@ const props = defineProps<{
 
 <style>
 .puri-button {
-  @apply py-1 leading-none flex flex-row items-center text-sm active:scale-95 transition-all;
+  @apply py-1 leading-normal flex flex-row items-center text-sm active:scale-95 transition-all;
 }
 .puri-button.default-color {
   @apply text-gray-500 dark:text-neutral-400;

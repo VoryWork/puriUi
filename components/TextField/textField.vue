@@ -8,6 +8,10 @@
         <input
           :type
           :autocomplete="props.autoComplete"
+          :readonly
+          :max
+          :min
+          :step
           v-model="model"
           class="puri-textfield-input w-full"
           :placeholder />
@@ -55,6 +59,22 @@ const props = defineProps({
   autoComplete: {
     type: String,
     default: "off",
+  },
+  readonly: {
+    type: Boolean,
+    default: false,
+  },
+  min: {
+    type: [Number, String],
+    required: false,
+  },
+  max: {
+    type: [Number, String],
+    required: false,
+  },
+  step: {
+    type: [Number, String],
+    required: false,
   },
 });
 </script>

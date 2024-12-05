@@ -37,7 +37,7 @@ const percentage = computed(() => {
   @apply flex flex-row rounded-md leading-none font-medium text-xs overflow-hidden h-1;
 }
 .puri-progress-container.default-color {
-  @apply bg-gray-300 dark:bg-neutral-800;
+  @apply bg-gray-300 dark:bg-neutral-700;
 }
 .puri-progress-container.puri-progress-filled {
   @apply h-2;

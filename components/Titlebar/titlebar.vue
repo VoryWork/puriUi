@@ -2,7 +2,7 @@
   <header
     ref="titlebar"
     class="puri-titlebar"
-    :class="[props.native ? 'mt-8' : 'mt-0', props.titleAutoHide ? 'puri-titlebar-hide' : '']">
+    :class="[props.native ? 'pt-8 h-20' : 'pt-0 h-12', props.titleAutoHide ? 'puri-titlebar-hide' : '']">
     <slot></slot>
   </header>
 </template>
@@ -28,7 +28,7 @@ onBeforeUnmount(() => {
 
 <style scoped>
 .puri-titlebar {
-  @apply fixed flex flex-row w-screen top-0 items-center text-lg font-medium z-20 h-12 justify-center transition-all backdrop-blur-md border-b border-gray-300/0 dark:border-neutral-700/0;
+  @apply fixed flex flex-row w-screen top-0 items-center text-lg font-medium z-20 justify-center transition-all backdrop-blur-md border-b border-gray-300/0 dark:border-neutral-700/0;
 }
 .puri-titlebar-hide {
   @apply opacity-0;

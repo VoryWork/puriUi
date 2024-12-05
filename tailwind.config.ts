@@ -1,7 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 import { Config } from "tailwindcss";
 export default {
-  content: ["./index.html", "./src/**/*.{vue,js,ts,jsx,tsx}","./components/**/*.{vue,js,ts,jsx,tsx}"],
+  content: ["./index.html", "./src/**/*.{vue,js,ts,jsx,tsx}", "./components/**/*.{vue,js,ts,jsx,tsx}"],
   darkMode: "class",
   theme: {
     screens: {
@@ -60,6 +60,34 @@ export default {
           800: "#0D1290",
           900: "#080B57",
           950: "#05083B",
+        },
+        "gold": {
+          DEFAULT: "#BD8556",
+          50: "#F1E5DA",
+          100: "#EBDACC",
+          200: "#E0C5AE",
+          300: "#D4B091",
+          400: "#C99A73",
+          500: "#BD8556",
+          600: "#9A663C",
+          700: "#6E482B",
+          800: "#422B1A",
+          900: "#160E09",
+          950: "#000000",
+        },
+        bronze: {
+          DEFAULT: "#C17053",
+          50: "#F1E0DA",
+          100: "#ECD4CB",
+          200: "#E1BBAD",
+          300: "#D6A28F",
+          400: "#CC8971",
+          500: "#C17053",
+          600: "#9D5339",
+          700: "#703B29",
+          800: "#432318",
+          900: "#160C08",
+          950: "#000000",
         },
       },
       fontFamily: {

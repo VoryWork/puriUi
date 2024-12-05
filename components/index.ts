@@ -1,4 +1,5 @@
 import Badge from "./Badge";
+import BottomSheets from "./BottomSheets";
 import Button from "./Button";
 import Card from "./Card";
 import Collapse from "./Collapse";
@@ -14,12 +15,14 @@ import NavBar from "./NavBar";
 import Progress from "./Progress";
 import TextField from "./TextField";
 import Titlebar from "./Titlebar";
+import Toggle from "./Toggle";
 import "./global.css";
 import type { App } from "vue";
 
 // 所有组件列表
 const components = [
   Badge,
+  BottomSheets,
   Button,
   Card,
   Collapse,
@@ -34,6 +37,7 @@ const components = [
   Progress,
   TextField,
   Titlebar,
+  Toggle,
 ];
 
 // 定义 install 方法
@@ -49,9 +53,10 @@ const install = function (app: App) {
   components.forEach((component) => app.component(`Puri${component.__name as string}`, component));
 };
 export * from "./interface";
-export {createRipple}
+export { createRipple };
 export {
   Badge,
+  BottomSheets,
   Button,
   Card,
   Collapse,
@@ -66,6 +71,7 @@ export {
   Progress,
   TextField,
   Titlebar,
+  Toggle,
 };
 
 export default install;

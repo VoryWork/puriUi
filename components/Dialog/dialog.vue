@@ -1,7 +1,10 @@
 <template>
   <Transition name="puri-dialoger">
     <div v-if="model" class="puri-dialog">
-      <div class="puri-dialog-background" @click="model = false"></div>
+        <div class="puri-dialog-background" @click="model = false">
+          <slot name="background"></slot>
+        </div>
+
       <!--背景板-->
       <!-- 对话框内容 -->
       <div class="puri-dialog-container" :class="props.maxWidth?`max-w-[${props.maxWidth}]`:undefined">
@@ -21,7 +24,7 @@ const props = defineProps<{maxWidth?:string}>();
   @apply fixed top-0 left-0 w-screen h-screen flex justify-center items-center z-30 p-5;
 }
 .puri-dialog-background {
-  @apply fixed top-0 left-0 dark:bg-neutral-900/60 backdrop-blur-sm right-0 z-20 w-screen p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-screen max-h-screen bg-gray-800/60;
+  @apply fixed top-0 left-0 dark:bg-neutral-900/60 backdrop-blur-sm right-0 z-20 w-screen overflow-x-hidden overflow-y-auto md:inset-0 h-dvh max-h-dvh bg-gray-800/60;
 }
 .puri-dialog-container{
     @apply z-30 flex-grow max-w-[36rem]

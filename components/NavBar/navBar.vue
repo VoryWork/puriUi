@@ -29,7 +29,7 @@ const props = defineProps<{
   @apply fixed bottom-0 w-full z-20 flex items-center justify-center;
 }
 .puri-screen-navbar {
-  @apply bg-white transition-all w-full dark:bg-neutral-800 dark:border-t border-neutral-700 border-opacity-50 shadow-md grid sm:w-2/3 md:w-1/3 xl:w-1/4 xxl:w-1/6 sm:rounded-xl sm:mb-2;
+  @apply bg-white transition-all w-full dark:bg-neutral-800 border-t border-gray-200 dark:border-neutral-700 border-opacity-50 shadow-md grid sm:w-2/3 md:w-1/3 xl:w-1/4 xxl:w-1/6 sm:rounded-xl sm:mb-2;
 }
 .puri-screen-navbar button {
   @apply flex flex-col items-center justify-center py-2 rounded-md transition-transform active:scale-90 duration-300;
