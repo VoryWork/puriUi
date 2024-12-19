@@ -5,3 +5,7 @@ declare module '*.vue' {
     const component: DefineComponent<{}, {}, any>
     export default component
 }
+declare module "postcss-color-converter" {
+    const classes: any;
+    export default classes;
+  }

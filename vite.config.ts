@@ -8,8 +8,8 @@ import terser from "@rollup/plugin-terser";
 import dts from "vite-plugin-dts";
 import autoprefixer from "autoprefixer";
 import tailwindcss from "tailwindcss";
+import postColorConverter from "postcss-color-converter";
 // 获取构建选项 build:browser 时，传入的变量: -f iife
-const { f } = minimist(process.argv.slice(2));
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [
@@ -34,7 +34,7 @@ export default defineConfig({
   },
   css: {
     postcss: {
-      plugins: [autoprefixer, tailwindcss(tailwindConfig)],
+      plugins: [autoprefixer, tailwindcss(tailwindConfig),postColorConverter({outputColorFormat: 'rgb'})],
     },
   },
   build: {

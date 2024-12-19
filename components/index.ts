@@ -8,11 +8,14 @@ import Container from "./Container";
 import createRipple from "./CreateRipple";
 import DatePicker from "./DatePicker";
 import Dialog from "./Dialog";
+import InfiniteProgress from "./InfiniteProgress";
 import ItemIndicator from "./ItemIndicator";
 import ListItem from "./ListItem";
+import Loading from "./Loading";
 import MainView from "./MainView";
 import NavBar from "./NavBar";
 import Progress from "./Progress";
+import Select from "./Select";
 import TextField from "./TextField";
 import Titlebar from "./Titlebar";
 import Toggle from "./Toggle";
@@ -30,11 +33,14 @@ const components = [
   Container,
   DatePicker,
   Dialog,
+  InfiniteProgress,
   ItemIndicator,
   ListItem,
+  Loading,
   MainView,
   NavBar,
   Progress,
+  Select,
   TextField,
   Titlebar,
   Toggle,
@@ -64,11 +70,14 @@ export {
   Container,
   DatePicker,
   Dialog,
+  InfiniteProgress,
   ItemIndicator,
   ListItem,
+  Loading,
   MainView,
   NavBar,
   Progress,
+  Select,
   TextField,
   Titlebar,
   Toggle,

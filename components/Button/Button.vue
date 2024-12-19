@@ -50,4 +50,7 @@ const props = defineProps<{
 .puri-button i {
   @apply text-xs;
 }
+.puri-button.puri-button-large i {
+  @apply text-sm;
+}
 </style>

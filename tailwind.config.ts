@@ -1,5 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 import { Config } from "tailwindcss";
+import postColorConverter from "postcss-color-converter";
 export default {
   content: ["./index.html", "./src/**/*.{vue,js,ts,jsx,tsx}", "./components/**/*.{vue,js,ts,jsx,tsx}"],
   darkMode: "class",
@@ -107,5 +108,5 @@ export default {
       },
     },
   },
-  plugins: [],
+  plugins: [postColorConverter({outputColorFormat: 'rgb'})],
 } satisfies Config;

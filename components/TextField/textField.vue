@@ -1,7 +1,7 @@
 <template>
   <div class="group">
     <div class="puri-textfield-label" v-if="props.label && props.variant === 'outline'">{{ props.label }}</div>
-    <div class="puri-textfield-container group" :class="{ fluid: props.variant === 'plain' }">
+    <div ref="containerRef" class="puri-textfield-container group" :class="{ fluid: props.variant === 'plain' }">
       <i v-if="props.prependIcon" class="bi puri-textfield-icon" :class="props.prependIcon"></i>
       <slot name="prepend"></slot>
       <div class="flex-grow">
@@ -26,6 +26,7 @@
 
 <script setup lang="ts">
 const model = defineModel();
+const containerRef = defineModel<any>('containerRef')
 const props = defineProps({
   variant: {
     type: String,

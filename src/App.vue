@@ -7,10 +7,14 @@ import PuriProgress from "../components/Progress/Progress.vue";
 import Toggle from "../components/Toggle/Toggle.vue";
 import BottomSheets from "../components/BottomSheets/BottomSheets.vue";
 import Card from "../components/Card/card.vue";
+import Select from "../components/Select/Select.vue";
+import Loading from "../components/Loading/Loading.vue";
+import InfiniteProgress from "../components/InfiniteProgress/InfiniteProgress.vue";
 const e = ref(0);
 const n = ref(0.1);
 const o = ref(0);
 const g = ref(true);
+const t = ref("A");
 </script>
 
 <template>
@@ -34,10 +38,8 @@ const g = ref(true);
             </div>
           </template>
         </Toggle>
-        <BottomSheets v-model="g" max-width="480px">
-          <Card title="猫咪"><Steps @click="g = true" v-model="e" :items="['AAAA', 'BBBBB', 'CCCCC']"></Steps></Card>
-          
-        </BottomSheets>
+        <Select label="masd " custom-value v-model="t" :items="['A', 'B', 'C']"></Select>
+        <InfiniteProgress variant="line" label="70%" :model-value="1"></InfiniteProgress>
       </div>
     </Container>
   </MainView>
