@@ -40,6 +40,7 @@ const t = ref("A");
         </Toggle>
         <Select label="masd " custom-value v-model="t" :items="['A', 'B', 'C']"></Select>
         <InfiniteProgress variant="line" label="70%" :model-value="1"></InfiniteProgress>
+        <Loading v-model="g" ></Loading>
       </div>
     </Container>
   </MainView>

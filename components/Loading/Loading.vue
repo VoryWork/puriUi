@@ -1,6 +1,9 @@
 <template>
   <Teleport to="body">
     <Dialog v-model="model" persistent max-width="160px">
+      <template #background>
+        <button v-if="showCancel" @click="props.onClose()" class="puri-loading-cancel-button puri-clickable"> <i class="bi bi-x"></i></button>
+      </template>
       <Card class="p-4 puri-col-center space-y-4">
         <div class="puri-loading mt-4"></div>
         <slot name="text">
@@ -12,15 +15,38 @@
 </template>
 
 <script setup lang="ts">
+import { onBeforeUnmount, onMounted, ref } from "vue";
+import Card from "../Card/card.vue";
+import Dialog from "../Dialog/dialog.vue";
+
 const model = defineModel<boolean>();
 const props = defineProps({
   text: {
     type: String,
     default: "加载中...",
   },
+  timeout:{
+    type:Number,
+    default:0
+  }
+  ,
+  onClose: {
+    type: Function,
+    default: () => {},
+  },
 });
-import Card from "../Card/card.vue";
-import Dialog from "../Dialog/dialog.vue";
+const showCancel= ref(false);
+const timeout = ref<any>(null)
+onMounted(() => {
+  if(props.timeout>0){
+    timeout.value = setTimeout(() => {
+      showCancel.value=true;
+    }, props.timeout);
+  }
+});
+onBeforeUnmount(() => {
+  clearTimeout(timeout.value);
+});
 </script>
 
 <style scoped>
@@ -32,6 +58,9 @@ import Dialog from "../Dialog/dialog.vue";
   @apply bg-primary-500 dark:bg-primary-400 w-3 h-3 rounded-full absolute;
 
   content: "";
+}
+.puri-loading-cancel-button{
+  @apply flex items-center justify-center leading-none absolute top-4 right-4 text-lg bg-white dark:bg-neutral-800 rounded-full w-8 h-8;
 }
 @keyframes puri-loading-rotation {
   0% {
