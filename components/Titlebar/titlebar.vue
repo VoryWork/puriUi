@@ -35,7 +35,7 @@ onBeforeUnmount(() => {
 
 <style scoped>
 .puri-titlebar {
-  @apply fixed flex flex-row w-screen top-0 items-center text-lg font-medium z-20 justify-center transition-all backdrop-blur-md border-b border-gray-300/0 dark:border-neutral-700/0;
+  @apply fixed flex flex-row w-screen top-0 items-center text-lg font-medium z-50 justify-center transition-all backdrop-blur-md border-b border-gray-300/0 dark:border-neutral-700/0;
 }
 .puri-titlebar-float {
   @apply opacity-100 dark:border-neutral-700/20 border-gray-400/20;
