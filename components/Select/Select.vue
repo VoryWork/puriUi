@@ -9,18 +9,19 @@
     v-model="textmodel"
     :readonly="!props.customValue"></TextField>
   <Teleport to="body">
-    <div @click="showSelect = false" v-if="showSelect" class="fixed z-20 w-full h-dvh top-0 right-0"></div>
-    <Transition name="selectitem-fade">
-      <div v-if="showSelect" class="absolute z-30" :style="locate">
+    <div @click="showSelect = false" v-if="showSelect" class="fixed z-[61] w-dvw h-dvh top-0 right-0">
+      <Transition name="selectitem-fade">
+      <div v-if="showSelect" class="absolute z-[70]" :style="locate">
         <div class="bg-white/100 dark:bg-neutral-800 border dark:border-neutral-700 rounded-md shadow-md w-full">
-          <ul class="max-h-64 overflow-auto divide-y divide-gray-100 dark:divide-neutral-600/50">
-            <slot name="items" v-for="(item, index) in items" :item :index :select="(v:string)=>{model=v}">
+          <ul class="max-h-64 overflow-auto">
+            <slot name="items" v-for="(item, index) in items" :item :index :selected="()=>{showSelect=false}">
               <li @click="model = item;showSelect=false" class="py-2 px-3 text-sm text-gray-800 dark:text-neutral-200">{{ item }}</li>
             </slot>
           </ul>
         </div>
       </div>
     </Transition>
+    </div>
   </Teleport>
 </template>
 
@@ -40,6 +41,8 @@ function showRef() {
       width: containerLocate.width + "px",
     };
     showSelect.value = true;
+  }else{
+    showSelect.value = false;
   }
 }
 function onResize() {

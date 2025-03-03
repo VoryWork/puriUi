@@ -60,7 +60,7 @@ onBeforeUnmount(() => {
   content: "";
 }
 .puri-loading-cancel-button{
-  @apply flex items-center justify-center leading-none absolute top-4 right-4 text-lg bg-white dark:bg-neutral-800 rounded-full w-8 h-8;
+  @apply flex items-center justify-center leading-none absolute top-8 right-8 text-lg bg-white dark:bg-neutral-800 rounded-full w-8 h-8;
 }
 @keyframes puri-loading-rotation {
   0% {

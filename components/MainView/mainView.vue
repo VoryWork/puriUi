@@ -14,7 +14,7 @@ const props = defineProps<{background?: string}>();
   @apply fixed top-0 z-0 w-full;
 }
 .puri-screen {
-  @apply bg-gray-100 min-h-dvh dark:bg-neutral-900 transition-colors w-full;
+  @apply bg-gray-100 min-h-dvh dark:bg-neutral-900 transition-colors relative;
 }
 .puri-screen.bannered {
   @apply bg-white dark:bg-neutral-900 z-10 ;

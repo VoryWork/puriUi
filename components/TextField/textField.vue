@@ -10,8 +10,10 @@
           :autocomplete="props.autoComplete"
           :readonly
           :max
+          :maxlength
           :min
           :step
+          :size
           v-model="model"
           class="puri-textfield-input w-full"
           :placeholder />
@@ -26,7 +28,7 @@
 
 <script setup lang="ts">
 const model = defineModel();
-const containerRef = defineModel<any>('containerRef')
+const containerRef = defineModel<any>("containerRef");
 const props = defineProps({
   variant: {
     type: String,
@@ -45,6 +47,11 @@ const props = defineProps({
     type: String,
     required: false,
   },
+  size: {
+    type: String,
+    required: false,
+  },
+  maxlength: { type: String, required: false },
   prependIcon: {
     type: String,
     required: false,
@@ -87,7 +94,7 @@ const props = defineProps({
  bg-white/50 dark:bg-neutral-800/50;
 }
 .puri-textfield-container.fluid {
-  @apply border-none rounded-none p-0 bg-transparent dark:bg-transparent ;
+  @apply border-none rounded-none p-0 bg-transparent dark:bg-transparent;
 }
 .puri-textfield-input {
   @apply focus:outline-none leading-none bg-transparent  placeholder:text-gray-500 dark:placeholder:text-neutral-500 text-gray-700

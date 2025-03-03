@@ -16,7 +16,7 @@
     "./*": "./dist/*"
   },
   "scripts": {
-    "dev": "vite",
+    "dev": "bunx --bun vite",
     "build:examples": "vue-tsc -b && vite build",
     "build": "vite build",
     "type-check": "vue-tsc --noEmit",

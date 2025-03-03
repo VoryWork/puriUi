@@ -1,33 +1,35 @@
 <template>
-  <Transition name="puri-dialoger">
-    <div v-if="model" class="puri-dialog">
-        <div class="puri-dialog-background" @click="persistent?undefined:model = false">
+  <Teleport to="body">
+    <Transition name="puri-dialoger">
+      <div v-if="model" class="puri-dialog">
+        <div class="puri-dialog-background" v-if="!props.noBackground" @click="persistent ? undefined : (model = false)">
           <slot name="background"></slot>
         </div>
 
-      <!--背景板-->
-      <!-- 对话框内容 -->
-      <div class="puri-dialog-container" :style="{maxWidth:props.maxWidth}">
-        <slot></slot>
+        <!--背景板-->
+        <!-- 对话框内容 -->
+        <div class="puri-dialog-container" :style="{ maxWidth: props.maxWidth }">
+          <slot></slot>
+        </div>
       </div>
-    </div>
-  </Transition>
+    </Transition>
+  </Teleport>
 </template>
 
 <script setup lang="ts">
 const model = defineModel<boolean>();
-const props = defineProps<{maxWidth?:string,persistent?:boolean}>();
+const props = defineProps<{ maxWidth?: string; persistent?: boolean,noBackground?:boolean }>();
 </script>
 
 <style scoped>
 .puri-dialog {
-  @apply fixed top-0 left-0 w-screen h-screen flex justify-center items-center z-30 p-5;
+  @apply fixed top-0 left-0 w-screen h-screen flex justify-center items-center z-[60] p-5;
 }
 .puri-dialog-background {
   @apply fixed top-0 left-0 dark:bg-neutral-900/60 backdrop-blur-sm right-0 z-20 w-screen overflow-x-hidden overflow-y-auto md:inset-0 h-dvh max-h-dvh bg-gray-900/60;
 }
-.puri-dialog-container{
-    @apply z-30 flex-grow max-w-[36rem]
+.puri-dialog-container {
+  @apply z-30 flex-grow max-w-[36rem];
 }
 
 .puri-dialoger-enter-active,

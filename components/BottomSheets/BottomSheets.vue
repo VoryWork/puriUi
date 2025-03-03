@@ -1,7 +1,7 @@
 <template>
   <Transition @enter="onEnter" name="puri-bottom-sheets-transition">
-    <div v-if="backgroundShow" class="puri-bottom-sheets">
-      <div class="puri-dialog-background" @click="model = false">
+    <div v-if="backgroundShow" class="puri-bottom-sheets" :class="{'puri-bottom-sheets-fixed':!props.noBackground}">
+      <div class="puri-dialog-background" v-if="!props.noBackground" @click="props.persistent?undefined:(model = false)">
         <slot name="background"></slot>
       </div>
 
@@ -23,7 +23,7 @@
 import { onMounted, ref, watch } from "vue";
 
 const model = defineModel<boolean>();
-const props = defineProps<{ maxWidth?: string }>();
+const props = defineProps<{ maxWidth?: string ,persistent?:boolean ,noBackground?:boolean}>();
 const backgroundShow = ref(false);
 const containerShow = ref(false);
 onMounted(() => {
@@ -48,7 +48,10 @@ function onEnter(){
 
 <style scoped>
 .puri-bottom-sheets {
-  @apply fixed top-0 left-0 w-dvw h-dvh flex items-end justify-center bottom-0 z-30;
+  @apply fixed left-0 w-dvw flex items-end justify-center bottom-0 z-[60];
+}
+.puri-bottom-sheets.puri-bottom-sheets-fixed {
+  @apply h-dvh top-0;
 }
 .puri-dialog-background {
   @apply fixed top-0 left-0 dark:bg-neutral-900/60 backdrop-blur-sm right-0 z-20 w-dvw overflow-x-hidden overflow-y-auto md:inset-0 h-dvh max-h-dvh bg-gray-800/60;

@@ -2,6 +2,7 @@ import Badge from "./Badge";
 import BottomSheets from "./BottomSheets";
 import Button from "./Button";
 import Card from "./Card";
+import Checkbox from "./Checkbox";
 import Collapse from "./Collapse";
 import ConfirmDialog from "./ConfirmDialog";
 import Container from "./Container";
@@ -16,6 +17,7 @@ import MainView from "./MainView";
 import NavBar from "./NavBar";
 import Progress from "./Progress";
 import Select from "./Select";
+import Steps from "./Steps";
 import TextField from "./TextField";
 import Titlebar from "./Titlebar";
 import Toggle from "./Toggle";
@@ -28,6 +30,7 @@ const components = [
   BottomSheets,
   Button,
   Card,
+  Checkbox,
   Collapse,
   ConfirmDialog,
   Container,
@@ -41,6 +44,7 @@ const components = [
   NavBar,
   Progress,
   Select,
+  Steps,
   TextField,
   Titlebar,
   Toggle,
@@ -65,6 +69,7 @@ export {
   BottomSheets,
   Button,
   Card,
+  Checkbox,
   Collapse,
   ConfirmDialog,
   Container,
@@ -78,6 +83,7 @@ export {
   NavBar,
   Progress,
   Select,
+  Steps,
   TextField,
   Titlebar,
   Toggle,

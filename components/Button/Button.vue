@@ -7,7 +7,7 @@
       props.solo ? 'puri-button-solo' : '',
     ]">
     <slot name="prepend"></slot>
-    <i v-if="props.prependIcon" class="bi" :class="props.prependIcon"></i>
+    <i v-if="props.prependIcon" class="puri-button-icon bi" :class="props.prependIcon"></i>
 
     <slot></slot>
     <i v-if="props.appendIcon" class="bi" :class="props.appendIcon"></i>
@@ -27,7 +27,7 @@ const props = defineProps<{
 
 <style>
 .puri-button {
-  @apply py-1 leading-normal flex flex-row items-center text-sm active:scale-95 transition-all;
+  @apply py-1 leading-normal flex flex-row items-center text-sm active:scale-95 transition-all space-x-2;
 }
 .puri-button.default-color {
   @apply text-gray-500 dark:text-neutral-400;
@@ -47,10 +47,10 @@ const props = defineProps<{
 .puri-button.puri-button-large-button-solo {
   @apply px-3;
 }
-.puri-button i {
+.puri-button i.puri-button-icon {
   @apply text-xs;
 }
-.puri-button.puri-button-large i {
+.puri-button.puri-button-large i.puri-button-icon {
   @apply text-sm;
 }
 </style>
